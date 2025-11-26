@@ -1,5 +1,7 @@
 import streamlit as st
-from langchain_core.messages import HumanMessage, SystemMessage, AIMessage
+# from langchain_core.messages import HumanMessage, SystemMessage, AIMessage
+from langchain.schema import HumanMessage, SystemMessage, AIMessage
+
 from langchain_groq import ChatGroq
 
 st.set_page_config(page_title="Ai Chatbot by Deepak", page_icon="🤖")
@@ -104,3 +106,4 @@ if st.session_state.api_key:
                     f"<div style='background-color:{ai_color}; color:{text_color}; padding:10px; border-radius:15px; max-width:70%; margin-right:auto; margin-bottom:5px'>{response.content}</div>",
                     unsafe_allow_html=True
                 )
+
